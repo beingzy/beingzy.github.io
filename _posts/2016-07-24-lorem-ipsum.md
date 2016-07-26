@@ -1,6 +1,7 @@
 ---
 title: a post full of Lorem Ipsum
 updated: 2017-07-24 15:00
+categories: tech
 ---
 
 ### The standard Lorem Ipsum passage, used since the 1500s

@@ -11,7 +11,8 @@ author_gravatar:    76820ce0d73ee118e12281b9c0a9e737 # Gravatar md5 hash
 twitter_username:   beingzy
 
 # Site Settings
-baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "beingzy.github.io" # Base URL must end WITHOUT a slash, default: ""
+url:                "beingzy.github.io"
 permalink:          /notes/:title # Post permalink
 timezone:           America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -19,7 +20,7 @@ timezone:           America/New_York # https://en.wikipedia.org/wiki/List_of_tz_
 highlighter:        rouge
 #markdown:           redcarpet
 #redcarpet:
-#    extensions:     ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "highlight", "footnotes"]
+extensions:     ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "highlight", "footnotes"]
 markdown:           kramdown
 kramdown:
     input:          GFM
