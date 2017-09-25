@@ -11,4 +11,4 @@ is to help me track the features.
 The feature list is:
 * install google analytics tracker [Done]
 * add disqus comment systems
-* add footer per blog page 
+* add footer per blog page
