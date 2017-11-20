@@ -1,6 +1,6 @@
 # Site Info
 title:              "yizhang.name"
-description:        "This is Yi Zhang's personal website."
+description:        "Yi Zhang is blogging here."
 #google_verify:      # Put your Google Verification here
 google_analytics:   UA-54742567-1 # Put your Google Analytics code
 
@@ -8,14 +8,14 @@ google_analytics:   UA-54742567-1 # Put your Google Analytics code
 # Author Info
 author_name:        "Yi Zhang"
 author_email:       beingzy@gmail.com
-author_gravatar:    76820ce0d73ee118e12281b9c0a9e737 # Gravatar md5 hash 
+author_gravatar:    76820ce0d73ee118e12281b9c0a9e737 # Gravatar md5 hash
 twitter_username:   beingzy
 
 # Site Settings
-baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "yizhang.name" # Base URL must end WITHOUT a slash, default: ""
 url:                "beingzy.github.io"
 permalink:          /notes/:title # Post permalink
-timezone:           America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Site Build
 highlighter:        rouge
