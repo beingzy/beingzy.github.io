@@ -17,6 +17,9 @@ url:                "beingzy.github.io"
 permalink:          /notes/:title # Post permalink
 timezone:           America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Disqus Info
+disqus:             "beingzy"
+
 # Site Build
 highlighter:        rouge
 #markdown:           redcarpet
