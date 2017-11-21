@@ -13,7 +13,7 @@ twitter_username:   beingzy
 
 # Site Settings
 baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
-url:                "beingzy.github.io"
+url:                "yizhang.name"
 permalink:          /notes/:title # Post permalink
 timezone:           America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
