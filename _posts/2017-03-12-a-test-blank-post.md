@@ -3,7 +3,7 @@ layout: post
 title: a test blank post
 updated: 2017-03-12
 categories: tech
-published: false
+published: true
 comments: true
 ---
 
