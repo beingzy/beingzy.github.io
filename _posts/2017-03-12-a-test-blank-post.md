@@ -1,10 +1,10 @@
 ---
 layout: post
+comments: true
 title: a test blank post
 updated: 2017-03-12
 categories: tech
-published: true
-comments: true
+tags: data-visualization
 ---
 
 
