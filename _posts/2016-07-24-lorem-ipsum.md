@@ -3,6 +3,7 @@ layout: post
 title: a post full of Lorem Ipsum
 updated: 2016-07-24 15:00
 categories: tech
+comments: true
 ---
 
 ### The standard Lorem Ipsum passage, used since the 1500s
