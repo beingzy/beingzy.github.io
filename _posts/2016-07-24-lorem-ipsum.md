@@ -1,4 +1,5 @@
 ---
+layout: post
 title: a post full of Lorem Ipsum
 updated: 2016-07-24 15:00
 categories: tech
