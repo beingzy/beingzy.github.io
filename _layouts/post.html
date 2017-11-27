@@ -22,10 +22,10 @@ comments: true
 
 </article>
 
-{% if page.comments %}
-    {% include comments.html %}
-{% endif %}
-
 <div class="back">
 	<a href="{{site.baseurl}}/">Back</a>
 </div>
+
+{% if page.comments %}
+    {% include comments.html %}
+{% endif %}
