@@ -5,12 +5,8 @@ comments: true
 
 <noscript>
 	<style>
-
-		article .footnotes {
-			display: block;
-		}
-
-	</style>
+    article .footnotes {display: block;}
+    </style>
 </noscript>
 
 <article>
@@ -26,10 +22,10 @@ comments: true
 
 </article>
 
-{% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-{% endif %}
-
 <div class="back">
 	<a href="{{site.baseurl}}/">Back</a>
 </div>
+
+{% if page.comments %}
+    {% include comments.html %}
+{% endif %}

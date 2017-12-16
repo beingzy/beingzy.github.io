@@ -1,4 +1,6 @@
 ---
+layout: post
+comments: true
 title: a post full of Lorem Ipsum
 updated: 2016-07-24 15:00
 categories: tech
