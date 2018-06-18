@@ -1,8 +1,11 @@
+{% if page.comments %}
+
 <div id="disqus_thread"><div>
 <script>
     var disqus_config = function () {
-        this.page.url = '{{ page.url }}';
-        this.page.identifier = '{{ page.url }}';
+        this.page.url = "{{ page.url }}";
+        this.page.identifier =  "{{ page.id }}";
+        this.page.title = "{{ page.title }}"
     };
     (function() {
         var d = document, s = d.createElement('script');
@@ -12,6 +15,7 @@
     })();
 </script>
 
-// this script will display the count of comments
 <script id="dsq-count-scr" src="//{{site.disqus.shortname}}.disqus.com/count.js" async>
 </script>
+
+{% endif %}

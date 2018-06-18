@@ -19,7 +19,7 @@ timezone:           America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_
 
 # Disqus Info: comment system
 disqus:
-    shortname: "beingzy"
+    shortname: "beingzygithubio"
 
 # Site Build
 highlighter:        rouge
