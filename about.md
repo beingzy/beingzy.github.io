@@ -1,14 +1,18 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-Hi,
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-This is my personal blog. I am a tech worker, currently serving as a data scientist at Pinterest inc. My original intention is to blog for sharing what I learned or stuff which interests me.
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
 
-The range of topics of contents here should be wide as the volume grows. Wish receive intelligent feedback from random audience.
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
 
-Let Karma lead me to the unpredictables.
 
--Yi
+[jekyll-organization]: https://github.com/jekyll
