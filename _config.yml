@@ -29,14 +29,20 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# plugins
+google_analytics: UA-54742567-1 # Put your Google Analytics code
+author_gravatar: 76820ce0d73ee118e12281b9c0a9e737 # Gravatar md5 hash
+disqus:
+    shortname: "beingzygithubio"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
