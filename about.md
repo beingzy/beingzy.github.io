@@ -4,15 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi, Dear visitors,
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a engineering manager at Ant Financial in China, after spending 9-year in US for PhD education and career. Previously, I had worked as
+Data Scientist at Pinterest and earned PhD degree from University of Cincinnati. I had lived or worked in a number of cities: Cincinnati, Columbus OH, San Francisco, San Mateo and Chengdu (now). 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I would like to share my thoughts on various topics mainly related to life & work of a tech worker. Occassionally, I may write some articles on my observations on changing society as Chinese citizens. 
 
+Enjoy your reading.
 
-[jekyll-organization]: https://github.com/jekyll
+- Yi
