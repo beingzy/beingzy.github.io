@@ -4,8 +4,8 @@ title:  "Create a Digital Product with Ideas and Polish It with Data" (WIP)
 date:   2019-09-07 00:00:00
 categories: jekyll update
 ---
-We are using digital products every day. Reading news with Google news or toutiao, listening music 
-with Spotify or Netease cloud music, hauling taxi-alike service with Uber/Lyft or Didi, watching video with Youtube or bilibili and etc. To build a product which can be used millions of users is both satisfying and finanicially rewarding for many tech-savvy persons. I am one of them.   
+We are using digital products every day. Read news with Google news or toutiao, listen music 
+with Spotify or Netease cloud music, haul taxi-alike service with Uber/Lyft or Didi, watch video with Youtube or bilibili and etc. To build a product which are used millions of users is both satisfying and finanicially rewarding for many tech-savvy persons. I am one of them.   
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
