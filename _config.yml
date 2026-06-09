@@ -13,8 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "chili & chill"
-description: "Yi Zhang's personal blogging system. I am writing for learning; sharing is secondary (serves as feedback to validate the goodness of my thoughts)."
+title: "Yi Zhang"
+home_note: "Short notes on AI-native systems, crypto, and company building. Written slowly, mostly to think better."
+description: "Short notes on AI-native systems, crypto, and company building."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://yizhang.name" # canonical URL
 enforce_ssl: yizhang.name
@@ -28,10 +29,7 @@ plugins:
   - jekyll-feed
 
 # plugins
-google_analytics: UA-54742567-1 # Put your Google Analytics code
 author_gravatar: 76820ce0d73ee118e12281b9c0a9e737 # Gravatar md5 hash
-disqus:
-    shortname: "beingzygithubio"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -44,3 +42,4 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+   - _temp/

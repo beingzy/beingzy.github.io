@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="article">
+  <header class="article-header">
+    <p class="kicker">{{ page.categories | first | default: "Essay" }}</p>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <p class="dek">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.description %}
+        <span aria-hidden="true"> · </span>{{ page.description }}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="article-content">
+    {{ content }}
+  </div>
+
+  <footer class="article-footer">
+    <a href="{{ '/' | relative_url }}">Back to writing</a>
+  </footer>
+</article>

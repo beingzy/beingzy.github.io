@@ -6,11 +6,10 @@ permalink: /about/
 
 Hi, Dear visitors,
 
-I am a engineering manager at Ant Financial in China, after spending 9-year in US for PhD education and career. Previously, I had worked as
-Data Scientist at Pinterest and earned PhD degree from University of Cincinnati. I had lived or worked in a number of cities: Cincinnati, Columbus OH, San Francisco, San Mateo and Chengdu (now). 
+I am Yi Zhang. I spent years in the US for PhD training and early career work, then built and operated startups across crypto and AI.
 
-I would like to share my thoughts on various topics mainly related to life & work of a tech worker. Occassionally, I may write some articles on my observations on changing society as Chinese citizens. 
+This site is a place for compact notes: what I am learning, what still feels unresolved, and what may become useful after a few more conversations. The themes will probably orbit AI-native systems, crypto, data, organizations, and founder judgment.
 
-Enjoy your reading.
+I write mainly to sharpen my own thinking. Sharing is useful because feedback exposes where the thinking is still soft.
 
 -Yi
