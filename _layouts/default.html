@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: oklch(98.3% 0.007 92);
+        --paper: oklch(99.1% 0.004 92);
+        --ink: oklch(22% 0.011 92);
+        --body: oklch(30% 0.01 92);
+        --muted: oklch(48% 0.012 92);
+        --soft: oklch(64% 0.011 92);
+        --line: oklch(88.5% 0.013 92);
+        --line-strong: oklch(78% 0.014 92);
+        --accent: oklch(41% 0.035 72);
+        --max: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: oklch(22% 0.011 92 / 24%);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        color: var(--accent);
+        text-decoration-color: currentColor;
+      }
+
+      .site-shell {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--max);
+        min-height: 100dvh;
+        margin: 0 auto;
+        padding: 52px 28px 32px;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 86px;
+      }
+
+      .brand {
+        font-size: 0.94rem;
+        font-weight: 560;
+        letter-spacing: 0;
+        text-decoration: none;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .nav a {
+        text-decoration: none;
+      }
+
+      .intro {
+        max-width: 620px;
+        margin-bottom: 54px;
+      }
+
+      .kicker {
+        margin: 0 0 14px;
+        color: var(--soft);
+        font-size: 0.78rem;
+        font-weight: 520;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: 0;
+        line-height: 1.12;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 660px;
+        font-size: clamp(1.72rem, 3.4vw, 2.45rem);
+        font-weight: 560;
+        line-height: 1.22;
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 540;
+      }
+
+      h3 {
+        margin: 42px 0 12px;
+        font-size: 1.18rem;
+      }
+
+      p {
+        margin: 0 0 1.15em;
+      }
+
+      .dek {
+        max-width: 610px;
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .home-note {
+        max-width: 590px;
+        color: var(--body);
+        font-size: clamp(1.16rem, 2.2vw, 1.45rem);
+        font-weight: 430;
+        line-height: 1.62;
+      }
+
+      .section {
+        margin-top: 44px;
+      }
+
+      .featured-link {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 28px;
+        padding: 0 0 18px;
+        text-decoration: none;
+      }
+
+      .featured-title {
+        display: block;
+        margin-bottom: 10px;
+        font-size: clamp(1.18rem, 2vw, 1.42rem);
+        font-weight: 560;
+        line-height: 1.28;
+      }
+
+      .featured-link p,
+      .post-summary {
+        color: var(--muted);
+      }
+
+      .meta,
+      .date {
+        color: var(--soft);
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+
+      .post-list {
+        display: grid;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .post-list a {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        text-decoration: none;
+      }
+
+      .post-title {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1rem;
+        font-weight: 540;
+        line-height: 1.35;
+      }
+
+      .post-summary {
+        display: block;
+        max-width: 600px;
+        font-size: 0.96rem;
+      }
+
+      .article-header {
+        margin-bottom: 56px;
+      }
+
+      .article-title {
+        margin-top: 18px;
+      }
+
+      .article {
+        max-width: 720px;
+      }
+
+      .article-content {
+        color: var(--body);
+        font-size: 1.04rem;
+        line-height: 1.78;
+      }
+
+      .article-content h2 {
+        margin-top: 58px;
+        margin-bottom: 16px;
+        font-size: 1.45rem;
+      }
+
+      .article-content h3 {
+        margin-top: 42px;
+        font-size: 1.18rem;
+      }
+
+      .article-content ul,
+      .article-content ol {
+        padding-left: 1.25rem;
+      }
+
+      .article-content li {
+        margin-bottom: 0.48rem;
+      }
+
+      .article-content blockquote {
+        margin: 34px 0;
+        padding: 0 0 0 20px;
+        border-left: 1px solid var(--line-strong);
+        color: var(--muted);
+      }
+
+      .article-content code {
+        padding: 0.12em 0.3em;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: var(--paper);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 0.88em;
+      }
+
+      .article-content table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+      }
+
+      .article-content th,
+      .article-content td {
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        vertical-align: top;
+      }
+
+      .article-footer,
+      .site-footer {
+        color: var(--soft);
+        font-size: 0.9rem;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .article-footer {
+        margin-top: 72px;
+      }
+
+      .site-footer {
+        margin-top: auto;
+        padding-top: 64px;
+      }
+
+      @media (max-width: 680px) {
+        .site-shell {
+          padding: 34px 20px 28px;
+        }
+
+        .site-header {
+          margin-bottom: 62px;
+        }
+
+        .nav {
+          gap: 12px;
+        }
+
+        .intro {
+          margin-bottom: 44px;
+        }
+
+        .section {
+          margin-top: 36px;
+        }
+
+        .featured-link,
+        .post-list a {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .date,
+        .meta {
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Site header">
+        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="{{ '/' | relative_url }}">Writing</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </nav>
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <span>{{ site.title }}</span>
+        <span aria-hidden="true"> · </span>
+        <a href="https://github.com/{{ site.github_username | strip }}">GitHub</a>
+        <span aria-hidden="true"> · </span>
+        <a href="https://x.com/{{ site.twitter_username | strip }}">X</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<section class="intro">
+  <h1 class="home-note">{{ site.home_note }}</h1>
+</section>
+
+{% assign posts = site.posts %}
+{% assign featured = posts | first %}
+
+{% if featured %}
+  <section class="section" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Latest Note</h2>
+    <a class="featured-link" href="{{ featured.url | relative_url }}">
+      <span>
+        <span class="featured-title">{{ featured.title }}</span>
+        <p>{{ featured.description | default: featured.excerpt | strip_html | normalize_whitespace | truncate: 220 }}</p>
+      </span>
+      <time class="date" datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%b %-d, %Y" }}</time>
+    </a>
+  </section>
+{% endif %}
+
+{% if posts.size > 1 %}
+  <section class="section" aria-labelledby="archive-heading">
+    <h2 id="archive-heading">Earlier Writing</h2>
+    <ol class="post-list">
+      {% for post in posts offset: 1 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <span>
+              <span class="post-title">{{ post.title }}</span>
+              <span class="post-summary">{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</span>
+            </span>
+            <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endif %}
